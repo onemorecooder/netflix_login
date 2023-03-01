@@ -96,6 +96,10 @@ table {
   padding: 40px;
 }
 
+.titleTable{
+  font-weight: bolder;
+}
+
 td{
   padding: 0%;
 }
@@ -112,10 +116,6 @@ td{
 
 ul {
   list-style: none;
-}
-
-td {
-  font-weight: bold;
 }
 
 .checks {

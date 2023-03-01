@@ -76,7 +76,7 @@ function Formulario3() {
           </td>
         </tr>
         <tr>
-          <td>Precio al mes</td>
+          <td className="titleTable">Precio al mes</td>
           <td className="centered">5,49€</td>
           <td className="centered">12,99€</td>
           <td className="centered">17,99€</td>
@@ -85,7 +85,7 @@ function Formulario3() {
           <td colspan="4"></td>
         </tr>
         <tr>
-          <td>Calidad de video</td>
+          <td className="titleTable">Calidad de video</td>
           <td className="centered">Buena</td>
           <td className="centered">Muy Buena</td>
           <td className="centered">Excepcional</td>
@@ -94,7 +94,7 @@ function Formulario3() {
           <td colspan="4"></td>
         </tr>
         <tr>
-          <td>Resolución</td>
+          <td className="titleTable">Resolución</td>
           <td className="centered">720p</td>
           <td className="centered">1080p</td>
           <td className="centered">4K+HDR</td>
@@ -103,7 +103,7 @@ function Formulario3() {
           <td colspan="4"></td>
         </tr>
         <tr>
-          <td>
+          <td className="titleTable">
             Multidispositivo: TV, ordenador, teléfono
             <br />
             móvil y tableta
@@ -122,7 +122,7 @@ function Formulario3() {
           <td colspan="4"></td>
         </tr>
         <tr>
-          <td>Descargas</td>
+          <td className="titleTable">Descargas</td>
           <td className="centered" style={{ color: "red", fontSize: "40px" }}>
             <b>-</b>
           </td>
