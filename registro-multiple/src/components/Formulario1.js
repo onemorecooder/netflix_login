@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import logo from "../img/logo.png";
 
 function Formulario1({ onValidEmail }) {
@@ -37,8 +38,8 @@ function Formulario1({ onValidEmail }) {
             onChange={handleEmailChange}
           />
           <label className="inputOne">Introduzca aquí su email</label>
-        </div><br/>
-        <button type="submit">Siguiente</button>
+        </div>
+        <motion.button whileHover={{ backgroundColor: "rgb(134, 0, 0)" }} type="submit">Siguiente</motion.button>
       </form>
     </div>
   );

@@ -3,6 +3,7 @@ body {
   padding: 0%;
   background-image: url(../img/banner.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .logo {
@@ -31,11 +32,11 @@ button {
   border-radius: 5px;
   cursor: pointer;
   color: white;
-  background-color: #de0913;
+  background-color: #e50914;
   font-size: 18px;
   border: 0;
   padding: 16px;
-  height: 70px;
+  height: 56px;
   width: 300px;
   margin: auto;
   text-align: center;
@@ -50,7 +51,7 @@ table {
   border-radius: 5px;
   cursor: pointer;
   color: white;
-  background-color: #de0913;
+  background-color: #e50914;
   font-size: 16px;
   border: 0;
   padding: 16px;
@@ -61,20 +62,19 @@ table {
   display: block;
 }
 
-ul{
-    list-style:none;
+ul {
+  list-style: none;
 }
 
 td {
-    
-    font-weight: bold;
+  font-weight: bold;
   padding: 20px;
 }
 
-.checks{
-    padding: 0;
-    margin: 0%;
-    width: 26px;
+.checks {
+  padding: 0;
+  margin: 0%;
+  width: 26px;
 }
 
 .title {
@@ -89,7 +89,7 @@ td {
   font-weight: lighter;
 }
 
-.in1{
+.in1 {
   display: block;
   margin: auto;
   text-align: center;
@@ -98,15 +98,15 @@ td {
 }
 
 .in1:not(:focus):not(:valid) {
-  border: 3px solid white;
+  border: 2px solid white;
 }
 
 .in1:valid {
-  border: 3px solid #3cb371;
+  border: 2px solid #3cb371;
 }
 
 .in1:invalid:focus {
-  border: 3px solid #de0913;
+  border: 2px solid #e50914;
 }
 
 .divs {
@@ -172,7 +172,7 @@ p {
 
 input {
   display: block;
-  height: 15px;
+  height: 10px;
   width: 100%;
   padding-top: 36.6666666667px;
   border: 0;
@@ -198,7 +198,9 @@ input:not(:placeholder-shown) ~ .inputTwo {
   color: black(255, 255, 255, 0.5);
 }
 
-*::placeholder { color: white; }
+*::placeholder {
+  color: white;
+}
 
 input:focus {
   outline: none;
@@ -207,22 +209,21 @@ input:focus {
 input:focus ~ .inputOne {
   padding-top: 2%;
   top: 0;
-  color: #de0913;
+  color: #e50914;
 }
 
 input:focus ~ .inputTwo {
   padding-top: 2%;
   top: 0;
-  color: #de0913;
+  color: #e50914;
 }
 
-
-.exito{
-    text-align: center;
+.exito {
+  text-align: center;
 }
 
-.l{
-    width: 190px;
-    display: block;
-    margin: auto;
+.l {
+  width: 190px;
+  display: block;
+  margin: auto;
 }
