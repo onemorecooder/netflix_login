@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 function Formulario2({ onValidEmail }) {
   // Aquí colocas el código de tu formulario 2
@@ -15,8 +16,6 @@ function Formulario2({ onValidEmail }) {
   function handleEmailChange(event) {
     setEmail(event.target.value);
   }
-
-
 
   return (
     <div className='form2'>
@@ -36,17 +35,25 @@ function Formulario2({ onValidEmail }) {
             value={email}
             onChange={handleEmailChange}
           />
-          <label className="inputTwo">Dirección de correo</label>
+          <label className="inputTwo"><span className="asterisco">*</span>Dirección de correo</label>
         </div>
         <br/>
         <div className="group2">
-          <input className="in1" type="password" placeholder="a" pattern=".{5,60}" id="name" required="required" />
-          <label className="inputTwo">Añadir una contraseña</label>
+          <input 
+          className="in1" 
+          type="password" 
+          placeholder="a" 
+          pattern=".{5,60}" 
+          title="La contraseña debe tener entre 5 y 60 caracteres"
+          id="name" 
+          required="required" />
+          <label className="inputTwo"><span className="asterisco">*</span>Añadir una contraseña</label>
         </div>
         
       <p className='textP'><input className='check' type={'checkbox'}></input>No, no quiero ofertas especiales de Netflix por correo.</p>
+      <p className='text2'>(<span className="asterisco">*</span>) Campos obligatorios.</p>
       <br /><br />
-      <button type="submit">Siguiente</button>
+      <motion.button whileHover={{ backgroundColor: "rgb(134, 0, 0)" }} type="submit">Siguiente</motion.button>
       </form>
     </div>
   );
