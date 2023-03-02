@@ -19,7 +19,7 @@ function Formulario() {
       style={{
         backgroundColor: paginaActual !== 1 ? "#eaeaea" : "",
         width: paginaActual === 1 ? "600px" :
-               paginaActual === 3 ? "65%" : "465px",
+               paginaActual === 3 ? "94%" : "465px",
         marginTop: paginaActual === 1 ? "10vh" :
                    paginaActual === 2 ? "12vh" : 
                    paginaActual === 3 ? "5vh" :
