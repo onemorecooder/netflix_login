@@ -1,19 +1,23 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import logo from "../img/logo.png";
 
 function Formulario1({ onValidEmail }) {
   const [email, setEmail] = useState("");
+  const [emailError, setEmailError] = useState("");
 
   function handleSubmit(event) {
     event.preventDefault();
     if (event.target.checkValidity()) {
       onValidEmail(email);
+    } else {
+      setEmailError("Parece que algo ha ido mal con su correo.");
     }
   }
 
   function handleEmailChange(event) {
     setEmail(event.target.value);
+    setEmailError("");
   }
 
   return (
@@ -26,7 +30,7 @@ function Formulario1({ onValidEmail }) {
         de correo para crear una suscripción a<br />
         Netflix o reactivarla.
       </h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} noValidate>
         <div className="group">
           <input
             className="in1"
@@ -38,6 +42,19 @@ function Formulario1({ onValidEmail }) {
             onChange={handleEmailChange}
           />
           <label className="inputOne">Introduzca aquí su email</label>
+          <AnimatePresence>
+            {emailError && (
+              <motion.div
+                className="error-message"
+                initial={{ opacity: 0, y: -5 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -5 }}
+                transition={{ duration: 0.3 }}
+              >
+                {emailError}
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
         <motion.button whileHover={{ backgroundColor: "rgb(134, 0, 0)" }} type="submit">Siguiente</motion.button>
       </form>
