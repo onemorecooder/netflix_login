@@ -11,6 +11,29 @@ body {
   background-size: cover;
 }
 
+.interrogation{
+  margin-left: 83%;
+  display: block;
+  width: 14%;
+  cursor: pointer;
+  opacity: 0.3;
+}
+
+.overlay{
+  margin-left: 460px;
+  margin-top: -250px;
+}
+
+.overlay img {
+  width: 300px;
+  height: auto;
+  margin: 10px;
+}
+
+.im{
+  margin-left: 2vh;
+}
+
 .logo {
   width: 50%;
   margin: auto;
@@ -211,6 +234,13 @@ td img{
   font: 400 20px Arial;
   cursor: text;
   transition: 0.25s ease;
+}
+
+.inputThree {
+  height: 0%;
+  width: 100%;
+  top:9px;
+  position: absolute;
 }
 
 .inputOne {

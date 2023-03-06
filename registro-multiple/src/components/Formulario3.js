@@ -2,11 +2,21 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import check from "../img/check.png";
 
-function Formulario3() {
+function Formulario3( {nextPage}) {
   const [precioSeleccionado, setPrecioSeleccionado] = useState("");
   const [opcionSeleccionada, setOpcionSeleccionada] = useState("");
 
+  function handleSubmit(event) {
+    event.preventDefault();
+    if (precioSeleccionado.trim() !== "") {
+      nextPage(precioSeleccionado);
+    } else {
+      console.log("No se ha seleccionado nada");
+    }
+  }
+
   return (
+    
     <div className="form2">
       <span>PASO 2 DE 3</span>
       <h1 className="title2">Selecciona el plan perfecto para ti</h1>
@@ -81,7 +91,7 @@ function Formulario3() {
           <td className="centered">12,99€</td>
           <td className="centered">17,99€</td>
         </tr>
-        <tr class="separator">
+        <tr className="separator">
           <td colspan="4"></td>
         </tr>
         <tr>
@@ -90,7 +100,7 @@ function Formulario3() {
           <td className="centered">Muy Buena</td>
           <td className="centered">Excepcional</td>
         </tr>
-        <tr class="separator">
+        <tr className="separator">
           <td colspan="4"></td>
         </tr>
         <tr>
@@ -99,7 +109,7 @@ function Formulario3() {
           <td className="centered">1080p</td>
           <td className="centered">4K+HDR</td>
         </tr>
-        <tr class="separator">
+        <tr className="separator">
           <td colspan="4"></td>
         </tr>
         <tr>
@@ -118,7 +128,7 @@ function Formulario3() {
             <img className="checks" src={check} alt=""></img>
           </td>
         </tr>
-        <tr class="separator">
+        <tr className="separator">
           <td colspan="4"></td>
         </tr>
         <tr>
@@ -135,6 +145,7 @@ function Formulario3() {
         </tr>
       </table>
       <br />
+      <form onSubmit={handleSubmit} noValidate>
       <div className="priceSelected">
         <p>
           <b>Precio seleccionado:&nbsp;</b>
@@ -148,6 +159,7 @@ function Formulario3() {
       >
         Siguiente
       </motion.button>
+      </form>
     </div>
   );
 }

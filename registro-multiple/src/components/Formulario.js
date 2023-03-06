@@ -28,8 +28,8 @@ function Formulario() {
     >
       {paginaActual === 1 && <Formulario1 onValidEmail={siguientePagina} />}
       {paginaActual === 2 && <Formulario2 onValidEmail={siguientePagina} />}
-      {paginaActual === 3 && <Formulario3 onValidEmail={siguientePagina} />}
-      {paginaActual === 4 && <Formulario4 onValidEmail={siguientePagina} />}
+      {paginaActual === 3 && <Formulario3 nextPage={siguientePagina} />}
+      {paginaActual === 4 && <Formulario4 onValidInputs={siguientePagina} />}
       {paginaActual === 5 && <CuentaCreada />}
     </div>
   );
