@@ -2,13 +2,20 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import check from "../img/check.png";
 
-function Formulario3( {nextPage}) {
+function Formulario3({ nextPage, setTextoFormulario3 }) {
   const [precioSeleccionado, setPrecioSeleccionado] = useState("");
   const [opcionSeleccionada, setOpcionSeleccionada] = useState("");
+
+  function handleInputChange(event) {
+    setPrecioSeleccionado(event.target.value);
+  }
 
   function handleSubmit(event) {
     event.preventDefault();
     if (precioSeleccionado.trim() !== "") {
+      setTextoFormulario3(precioSeleccionado);
+      console.log("PrecioSeleccionado" + precioSeleccionado);
+      console.log("opcionSeleccionada" + opcionSeleccionada);
       nextPage(precioSeleccionado);
     } else {
       console.log("No se ha seleccionado nada");
@@ -16,7 +23,7 @@ function Formulario3( {nextPage}) {
   }
 
   return (
-    
+
     <div className="form2">
       <span>PASO 2 DE 3</span>
       <h1 className="title2">Selecciona el plan perfecto para ti</h1>
@@ -40,9 +47,8 @@ function Formulario3( {nextPage}) {
           <td></td>
           <td>
             <motion.button
-              className={`buttonTable ${
-                opcionSeleccionada === "basico" ? "seleccionado" : ""
-              }`}
+              className={`buttonTable ${opcionSeleccionada === "basico" ? "seleccionado" : ""
+                }`}
               whileHover={{ backgroundColor: "rgb(221, 122, 122)" }}
               onClick={() => {
                 setOpcionSeleccionada("basico");
@@ -58,9 +64,8 @@ function Formulario3( {nextPage}) {
           </td>
           <td>
             <motion.button
-              className={`buttonTable ${
-                opcionSeleccionada === "estandar" ? "seleccionado" : ""
-              }`}
+              className={`buttonTable ${opcionSeleccionada === "estandar" ? "seleccionado" : ""
+                }`}
               whileHover={{ backgroundColor: "rgb(221, 122, 122)" }}
               onClick={() => {
                 setOpcionSeleccionada("estandar");
@@ -72,9 +77,8 @@ function Formulario3( {nextPage}) {
           </td>
           <td>
             <motion.button
-              className={`buttonTable ${
-                opcionSeleccionada === "premium" ? "seleccionado" : ""
-              }`}
+              className={`buttonTable ${opcionSeleccionada === "premium" ? "seleccionado" : ""
+                }`}
               whileHover={{ backgroundColor: "rgb(221, 122, 122)" }}
               onClick={() => {
                 setOpcionSeleccionada("premium");
@@ -145,20 +149,25 @@ function Formulario3( {nextPage}) {
         </tr>
       </table>
       <br />
-      <form onSubmit={handleSubmit} noValidate>
-      <div className="priceSelected">
-        <p>
-          <b>Precio seleccionado:&nbsp;</b>
-          {precioSeleccionado}
-        </p>
-      </div>
-      <br />
-      <motion.button
-        whileHover={{ backgroundColor: "rgb(134, 0, 0)" }}
-        type="submit"
-      >
-        Siguiente
-      </motion.button>
+      <form onSubmit={handleSubmit}>
+
+
+
+
+        <div className="priceSelected">
+          <p className="textoPrice" name="texto"><b>Precio seleccionado:&nbsp;</b></p>
+          <input className="inputPrice" type="text" value={precioSeleccionado} onChange={handleInputChange} />
+        </div>
+
+
+
+        <br />
+        <motion.button
+          whileHover={{ backgroundColor: "rgb(134, 0, 0)" }}
+          type="submit"
+        >
+          Siguiente
+        </motion.button>
       </form>
     </div>
   );
