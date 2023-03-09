@@ -169,7 +169,6 @@ function Formulario4({ onValidInputs, volverPaginaAnterior, texto }) {
     }
   }
 
-
   function handleCcvChange(event) {
     const ccvInput = event.target;
     setCcv(ccvInput.value);
@@ -353,18 +352,6 @@ function Formulario4({ onValidInputs, volverPaginaAnterior, texto }) {
               whileHover={{ scale: 1.1 }}
             ></motion.img>
           </label>
-          {hovered && (
-            <motion.div
-              className="overlay"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-            >
-              <img src={ccvs1} alt="Imagen flotante" />
-              <img src={ccvs2} alt="Imagen flotante" />
-            </motion.div>
-          )}
           <AnimatePresence>
             {ccvError && (
               <motion.div
@@ -378,26 +365,28 @@ function Formulario4({ onValidInputs, volverPaginaAnterior, texto }) {
               </motion.div>
             )}
           </AnimatePresence>
+          {hovered && (
+            <motion.div
+              className="overlay"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <img src={ccvs1} alt="Imagen flotante" />
+              <img src={ccvs2} alt="Imagen flotante" />
+            </motion.div>
+          )}
         </div>
       </div>
       <p className="text2">
         (<span className="asterisco">*</span>) Campos obligatorios.
       </p>
 
-
-
-
-
-
       <div className="volver">
         <p className="planSeleccionado">Plan selecionado:<b>&nbsp; {texto}</b></p>
         <a className="buttVolver" href="#" onClick={volverPaginaAnterior}>Cambiar plan</a>
       </div>
-
-
-
-
-
 
       <br />
       <motion.button
