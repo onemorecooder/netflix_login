@@ -42,7 +42,9 @@ function Formulario1({ onValidEmail }) {
             onChange={handleEmailChange}
           />
           <label className="inputOne">Introduzca aquí su email</label>
-          <AnimatePresence>
+          <motion.button className="bInicio" whileHover={{ backgroundColor: "rgb(134, 0, 0)" }} type="submit">Siguiente</motion.button>
+        </div>
+        <AnimatePresence>
             {emailError && (
               <motion.div
                 className="error-message"
@@ -55,8 +57,6 @@ function Formulario1({ onValidEmail }) {
               </motion.div>
             )}
           </AnimatePresence>
-        </div>
-        <motion.button whileHover={{ backgroundColor: "rgb(134, 0, 0)" }} type="submit">Siguiente</motion.button>
       </form>
     </div>
   );

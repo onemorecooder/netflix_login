@@ -17,8 +17,6 @@ body {
 }
 
 .volver {
-  background-color: lightgrey;
-  border-radius: 5px;
   width: 80%;
   margin: auto;
   display: flex;
@@ -27,17 +25,24 @@ body {
 }
 
 .buttVolver {
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  background-color: #0077cc;
   text-align: center;
-  width: 190px;
+  width: 160px;
   text-decoration: none;
+  color: inherit;
+  background-color: transparent;
   border: none;
   margin: 0;
+  padding: 0;
   font: inherit;
   cursor: pointer;
+}
+
+.buttVolver:hover {
+  color: #0077cc;
+}
+
+.buttVolver:visited {
+  color: #004499;
 }
 
 .interrogation {
@@ -180,7 +185,6 @@ td {
 }
 
 .planSeleccionado {
-  margin-left: 16px;
   width: 400px;
 }
 
@@ -223,8 +227,6 @@ td img {
 }
 
 .in1 {
-  border-bottom-right-radius: 0px;
-  border-top-right-radius: 0px;
   display: block;
   margin: auto;
   text-align: center;
@@ -233,20 +235,14 @@ td img {
 }
 
 .in1:not(:focus):not(:valid) {
-  border-bottom-right-radius: 0px;
-  border-top-right-radius: 0px;
   border: 2px solid white;
 }
 
 .in1:valid {
-  border-bottom-right-radius: 0px;
-  border-top-right-radius: 0px;
   border: 2px solid #3cb371;
 }
 
 .in1:invalid:focus {
-  border-bottom-right-radius: 0px;
-  border-top-right-radius: 0px;
   border: 2px solid #e50914;
 }
 
@@ -275,20 +271,10 @@ td img {
 }
 
 .group {
-  display: flex;
   margin: auto;
-  width: 100%;
-  height: 80px;
+  width: 58%;
+  height: 110px;
   position: relative;
-}
-
-.bInicio{
-  font-size: 24px;
-  font-weight: 400px;
-  height: 96.9%;
-  width: 300px;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
 }
 
 .group2 {
@@ -316,8 +302,7 @@ td img {
 }
 
 .inputOne {
-  height: 100%;
-  padding-left: 14%;
+  padding-left: 19%;
   position: absolute;
   top: 26.6666666667px;
   color: black(255, 255, 255, 0.5);

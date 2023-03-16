@@ -169,7 +169,6 @@ function Formulario4({ onValidInputs, volverPaginaAnterior, texto }) {
     }
   }
 
-
   function handleCcvChange(event) {
     const ccvInput = event.target;
     setCcv(ccvInput.value);
@@ -384,26 +383,10 @@ function Formulario4({ onValidInputs, volverPaginaAnterior, texto }) {
         (<span className="asterisco">*</span>) Campos obligatorios.
       </p>
 
-
-
-
-
-
       <div className="volver">
         <p className="planSeleccionado">Plan selecionado:<b>&nbsp; {texto}</b></p>
-        <motion.button 
-        whileHover={{ scale: 1.1, backgroundColor: "#4e95c8" }}
-        whileTap={{ scale: 0.8, backgroundColor: "#0f5486"}}
-        className="buttVolver" 
-        onClick={volverPaginaAnterior}>
-          Cambiar plan
-          </motion.button>
+        <a className="buttVolver" href="#" onClick={volverPaginaAnterior}>Cambiar plan</a>
       </div>
-
-
-
-
-
 
       <br />
       <motion.button
